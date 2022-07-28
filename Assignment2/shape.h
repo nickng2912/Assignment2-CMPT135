@@ -5,24 +5,25 @@
 class Shape
 {
 public:
-	virtual int calculateArea() = 0; 
-	virtual int calculatePerimeter() = 0; 
+	Shape();
+	Shape(Point initalCenter);
+
+	virtual void calculateArea() = 0; 
+	virtual void calculatePerimeter() = 0; 
 
 	virtual void reflect() = 0; 
-	virtual void translate() = 0; 
+	virtual void translation() = 0; 
 
-	int getLength() const; 
-	int getWidth() const; 
+	int getArea() const; 
+	int getPerimeter() const; 
 	Point getCenterPoint() const; 
 
-	void setLength(int newLength);
-	void setWidth(int newWidth); 
 	void setCenterPoint(Point newCenter); 
 
 protected:
 	Point center;
-	int length; 
-	int width;
+	int area; 
+	int perimeter;
 };
 
 #endif SHAPE_H

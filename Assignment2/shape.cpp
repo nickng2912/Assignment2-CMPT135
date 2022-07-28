@@ -2,13 +2,19 @@
 #include <iostream>
 using namespace std; 
 
-int Shape::getLength() const
+Shape::Shape()
+	:center(), area(0), perimeter(0)
+{}
+Shape::Shape(Point initialCenter)
+	:center(initialCenter), area(0), perimeter(0)
+{}
+int Shape::getArea() const
 {
-	return length; 
+	return area; 
 }
-int Shape::getWidth() const
+int Shape::getPerimeter() const
 {
-	return width; 
+	return perimeter; 
 }
 Point Shape::getCenterPoint() const
 {
@@ -18,12 +24,4 @@ Point Shape::getCenterPoint() const
 void Shape::setCenterPoint(Point newCenter)
 {
 	center = newCenter;
-}
-void Shape::setLength(int newLength)
-{
-	length = newLength;
-}
-void Shape::setWidth(int newWidth)
-{
-	width = newWidth; 
 }
