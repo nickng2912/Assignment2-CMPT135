@@ -8,11 +8,11 @@ Point::Point()
 Point::Point(int initialX, int initialY)
 	:x(initialX), y(initialY)
 {}
-int Point::getX()
+int Point::getX() const
 {
 	return x; 
 }
-int Point::getY()
+int Point::getY() const
 {
 	return y;
 }

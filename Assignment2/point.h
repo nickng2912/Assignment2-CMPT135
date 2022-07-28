@@ -7,8 +7,8 @@ public:
 	Point();
 	Point(int initialX, int initialY);
 
-	int getX();
-	int getY();
+	int getX() const;
+	int getY() const;
 
 	void setPoint(int newX, int newY);
 private:
