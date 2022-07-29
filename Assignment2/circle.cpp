@@ -9,15 +9,17 @@ Circle::Circle(Point initialCenter, double initialRadius)
 	:Shape(initialCenter), radius(initialRadius)
 {}
 
-void Circle::calculateArea()
+double Circle::area()
 {
-	double pi = 3.14159265359;
-	area =  (radius * radius) * pi ;
+	double pi = 3.14;
+	areaShape =  (radius * radius) * pi ;
+	return areaShape;
 }
-void Circle::calculatePerimeter()
+double Circle::perimeter()
 {
-	double pi = 3.14159265359;
-	perimeter = 2 * pi * radius ; 
+	double pi = 3.14;
+	perimeterShape = 2 * pi * radius ;
+	return perimeterShape;
 }
 
 void Circle::reflect(char axis)

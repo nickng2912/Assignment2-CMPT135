@@ -8,8 +8,8 @@ public:
 	Square();
 	Square(Point initialCenter, double initialSize);
 
-	void calculateArea(); 
-	void calculatePerimeter(); 
+	double area(); 
+	double perimeter(); 
 
 	void reflect(char axis);
 	void translation(double moveX, double moveY);

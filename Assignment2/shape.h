@@ -8,8 +8,8 @@ public:
 	Shape();
 	Shape(Point initalCenter);
 
-	virtual void calculateArea() = 0; 
-	virtual void calculatePerimeter() = 0; 
+	virtual double area() = 0;
+	virtual double perimeter() = 0;
 
 	virtual void reflect(char axis) = 0; 
 	virtual void translation(double moveX, double moveY) = 0; 
@@ -24,8 +24,8 @@ public:
 
 protected:
 	Point center;
-	double area;
-	double perimeter;
+	double areaShape;
+	double perimeterShape;
 };
 
 #endif SHAPE_H

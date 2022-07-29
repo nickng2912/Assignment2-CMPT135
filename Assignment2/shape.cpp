@@ -3,18 +3,18 @@
 using namespace std; 
 
 Shape::Shape()
-	:center(), area(0), perimeter(0)
+	:center(), areaShape(0), perimeterShape(0)
 {}
 Shape::Shape(Point initialCenter)
-	:center(initialCenter), area(0), perimeter(0)
+	:center(initialCenter), areaShape(0), perimeterShape(0)
 {}
 double Shape::getArea() const
 {
-	return area; 
+	return areaShape;
 }
 double Shape::getPerimeter() const
 {
-	return perimeter; 
+	return perimeterShape;
 }
 Point Shape::getCenterPoint() const
 {

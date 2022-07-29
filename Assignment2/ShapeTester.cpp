@@ -32,6 +32,18 @@ int main()
 	for (int i = 0; i < size; ++i)
 		shapes[i]->display();
 
+	cout << "\n22222222222222222222222222\n";
+
+	cout << "\nthe area of the first rectangle is: ";
+	cout << rectangle1->area() << endl;
+
+	cout << "It is a square, the area is: ";
+	Square* square = dynamic_cast<Square*> (rectangle3);
+	cout << square->area() << endl;
+
+	cout << "the perimeter of the circle is: ";
+	cout << circle->perimeter() << endl;
+
 	system("pause");
 	return 0; 
 }

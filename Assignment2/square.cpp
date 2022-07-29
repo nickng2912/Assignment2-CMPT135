@@ -9,15 +9,15 @@ Square::Square(Point initialCenter, double initialSize)
 	:Rectangle(initialCenter, initialSize, initialSize), size(initialSize)
 {}
 
-void Square::calculateArea()
+double Square::area()
 {
-	area = size * size;
-	cout << area << endl; 
+	areaShape = size * size;
+	return areaShape;
 }
-void Square::calculatePerimeter()
+double Square::perimeter()
 {
-	perimeter = size * 4;
-	cout << perimeter << endl; 
+	perimeterShape = size * 4;
+	return perimeterShape;
 }
 
 void Square::reflect(char axis)

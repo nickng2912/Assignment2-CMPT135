@@ -8,8 +8,8 @@ public:
 	Rectangle();
 	Rectangle(Point initialCenter, double initialLength, double initialWidth);
 
-	void calculateArea();
-	void calculatePerimeter();
+	double area();
+	double perimeter();
 
 	void reflect(char axis); 
 	void translation(double moveX, double moveY);

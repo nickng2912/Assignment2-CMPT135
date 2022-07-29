@@ -8,8 +8,8 @@ public:
 	Circle();
 	Circle(Point initialCenter, double initialRadius);
 
-	void calculateArea(); 
-	void calculatePerimeter(); 
+	double area(); 
+	double perimeter(); 
 
 	void reflect(char axis); 
 	void translation(double moveX, double moveY);

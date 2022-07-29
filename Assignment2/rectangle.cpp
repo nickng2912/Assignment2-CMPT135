@@ -9,15 +9,15 @@ Rectangle::Rectangle(Point initialCenter, double initialLength, double initialWi
 	:Shape(initialCenter), length(initialLength), width(initialWidth)
 {}
 
-void Rectangle::calculateArea()
+double Rectangle::area()
 {
-	area = length * width; 
-	cout << area << endl; 
+	areaShape = length * width; 
+	return areaShape;
 }
-void Rectangle::calculatePerimeter()
+double Rectangle::perimeter()
 {
-	perimeter = (length + width) * 2;
-	cout << perimeter; 
+	perimeterShape = (length + width) * 2;
+	return perimeterShape;
 }
 void Rectangle::reflect(char axis)
 {
