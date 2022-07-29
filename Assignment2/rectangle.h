@@ -6,24 +6,26 @@ class Rectangle : public Shape
 {
 public:
 	Rectangle();
-	Rectangle(Point initialCenter, int initialLength, int initialWidth);
+	Rectangle(Point initialCenter, double initialLength, double initialWidth);
 
 	void calculateArea();
 	void calculatePerimeter();
 
 	void reflect(char axis); 
-	void translation(int moveX, int moveY);
+	void translation(double moveX, double moveY);
 
-	int getLenght() const; 
-	int getWidth() const;
+	double getLenght() const; 
+	double getWidth() const;
 	Point getPoint() const;
 
-	void setLength(int newLength); 
-	void setWidth(int newWidth); 
+	void setLength(double newLength); 
+	void setWidth(double newWidth); 
+	
+	void display();
 
 private:
-	int length; 
-	int width; 
+	double length; 
+	double width; 
 };
 
 

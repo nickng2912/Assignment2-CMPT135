@@ -8,11 +8,11 @@ Shape::Shape()
 Shape::Shape(Point initialCenter)
 	:center(initialCenter), area(0), perimeter(0)
 {}
-int Shape::getArea() const
+double Shape::getArea() const
 {
 	return area; 
 }
-int Shape::getPerimeter() const
+double Shape::getPerimeter() const
 {
 	return perimeter; 
 }

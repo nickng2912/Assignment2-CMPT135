@@ -5,7 +5,7 @@ using namespace std;
 Rectangle::Rectangle() 
 	:Shape(), length(0), width(0)
 {}
-Rectangle::Rectangle(Point initialCenter, int initialLength, int initialWidth)
+Rectangle::Rectangle(Point initialCenter, double initialLength, double initialWidth)
 	:Shape(initialCenter), length(initialLength), width(initialWidth)
 {}
 
@@ -21,7 +21,7 @@ void Rectangle::calculatePerimeter()
 }
 void Rectangle::reflect(char axis)
 {
-	int reflectX(0), reflectY(0);
+	double reflectX(0), reflectY(0);
 
 	if (axis == 'x' || axis == 'X')
 	{
@@ -39,17 +39,20 @@ void Rectangle::reflect(char axis)
 	}
 }
 
-void Rectangle::translation(int moveX, int moveY)
+void Rectangle::translation(double moveX, double moveY)
 {
+	Point temp = this->getCenterPoint();
+	double tempX = temp.getX();
+	double tempY = temp.getY();
 	//set new point for the translation version 
-	this->center.setPoint(moveX, moveY);
+	this->center.setPoint(moveX + tempX, moveY + tempY);
 }
 
-int Rectangle::getLenght() const
+double Rectangle::getLenght() const
 {
 	return length; 
 }
-int Rectangle::getWidth() const
+double Rectangle::getWidth() const
 {
 	return width; 
 }
@@ -58,11 +61,20 @@ Point Rectangle::getPoint() const
 	return this->getCenterPoint(); 
 }
 
-void Rectangle::setLength(int newLength)
+void Rectangle::setLength(double newLength)
 {
 	length = newLength;
 }
-void Rectangle::setWidth(int newWidth)
+void Rectangle::setWidth(double newWidth)
 {
 	width = newWidth;
+}
+
+void Rectangle::display()
+{
+	Point temp = this->getPoint();
+	cout << "Rectangle: " << endl; 
+	cout << "\tCentre: " << "(" << temp.getX() << ", " << temp.getY() << ")" << endl;
+	cout << "\tLength: " << length << endl; 
+	cout << "\tWidth: " << width << endl;
 }

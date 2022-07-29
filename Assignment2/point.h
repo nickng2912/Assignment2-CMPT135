@@ -5,15 +5,15 @@ class Point
 {
 public:
 	Point();
-	Point(int initialX, int initialY);
+	Point(double initialX, double initialY);
 
-	int getX() const;
-	int getY() const;
+	double getX() const;
+	double getY() const;
 
-	void setPoint(int newX, int newY);
+	void setPoint(double newX, double newY);
 private:
-	int x; 
-	int y;
+	double x; 
+	double y;
 };
 
 #endif POINT_H
