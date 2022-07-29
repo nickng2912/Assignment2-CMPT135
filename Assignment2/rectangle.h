@@ -22,6 +22,7 @@ public:
 	void setWidth(double newWidth); 
 	
 	void display();
+	void printFourVertices(); 
 
 private:
 	double length; 

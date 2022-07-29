@@ -78,3 +78,17 @@ void Rectangle::display()
 	cout << "\tLength: " << length << endl; 
 	cout << "\tWidth: " << width << endl;
 }
+void Rectangle::printFourVertices()
+{
+	double x1, x2, y1, y2; 
+	Point temp = this->getPoint();
+	x1 = temp.getX() - (length / 2);
+	x2 = temp.getX() + (length / 2);
+	y1 = temp.getY() + (width / 2);
+	y2 = temp.getY() - (width / 2);
+
+	cout << "(" << x1 << ", " << y1 << ")" << endl;
+	cout << "(" << x2 << ", " << y1 << ")" << endl;
+	cout << "(" << x2 << ", " << y2 << ")" << endl;
+	cout << "(" << x1 << ", " << y2 << ")" << endl;
+}

@@ -44,6 +44,14 @@ int main()
 	cout << "the perimeter of the circle is: ";
 	cout << circle->perimeter() << endl;
 
+	cout << "\n33333333333333333333333333\n";
+
+	cout << "\nThe four vertices of the first rectangle are: (clockwise from top-left)\n";
+	rectangle1->printFourVertices();
+
+	cout << "\nThe four vertices of the third rectangle are:\n";
+	rectangle3->printFourVertices();
+
 	system("pause");
 	return 0; 
 }

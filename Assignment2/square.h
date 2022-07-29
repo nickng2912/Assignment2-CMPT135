@@ -20,6 +20,7 @@ public:
 	void setSize(double newSize); 
 
 	void display(); 
+
 private:
 	double size;
 };

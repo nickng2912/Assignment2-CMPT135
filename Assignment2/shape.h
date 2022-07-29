@@ -22,6 +22,7 @@ public:
 
 	virtual void display() = 0; 
 
+
 protected:
 	Point center;
 	double areaShape;
