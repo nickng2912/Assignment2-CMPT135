@@ -22,27 +22,24 @@ double Circle::perimeter()
 	return perimeterShape;
 }
 
-void Circle::reflect(char axis)
+void Circle::reflectX()
 {
-	Point centerCircle = this->getCenterPoint();
-	double reflectX(0), reflectY(0);
+	Point temp = this->getCenterPoint();
+	double tempX(temp.getX()), tempY(temp.getY());
+	tempY = 0 - tempY;
+	this->center.setPoint(tempX, tempY);
 
-	if (axis == 'x' || axis == 'X')
-	{
-		//set new center point for the circle 
-		reflectX = centerCircle.getX();
-		reflectY = 0 - centerCircle.getY();
-		this->center.setPoint(reflectX, reflectY);
-	}
-	else if (axis == 'y' || axis == 'Y')
-	{
-		//set new center point for the circle
-		reflectX = 0 - centerCircle.getX();
-		reflectY = centerCircle.getY();
-		this->center.setPoint(reflectX, reflectY);
-	}
 }
-void Circle::translation(double moveX, double moveY)
+void Circle::reflectY()
+{
+	Point temp = this->getCenterPoint();
+	double tempX(temp.getX()), tempY(temp.getY());
+	tempX = 0 - tempX;
+	this->center.setPoint(tempX, tempY);
+
+}
+
+void Circle::translate(double moveX, double moveY)
 {
 	Point temp = this->getCenterPoint();
 	double tempX = temp.getX();
@@ -68,7 +65,9 @@ void Circle::setRadius(double newRadius)
 void Circle::display()
 {
 	Point temp = this->getPoint();
+	cout << endl;
 	cout << "Circle: " << endl;
 	cout << "\tCentre: " << "(" << temp.getX() << ", " << temp.getY() << ")" << endl;
 	cout << "\tRadius: " << radius << endl; 
+	cout << endl;
 }

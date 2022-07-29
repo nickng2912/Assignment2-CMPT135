@@ -19,27 +19,24 @@ double Rectangle::perimeter()
 	perimeterShape = (length + width) * 2;
 	return perimeterShape;
 }
-void Rectangle::reflect(char axis)
+void Rectangle::reflectX()
 {
-	double reflectX(0), reflectY(0);
+	Point temp = this->getCenterPoint();
+	double tempX(temp.getX()), tempY(temp.getY());
+	tempY = 0 - tempY; 
+	this->center.setPoint(tempX, tempY); 
 
-	if (axis == 'x' || axis == 'X')
-	{
-		//set new center point for the rectangle 
-		reflectX = length;
-		reflectY = 0 - width;
-		this->center.setPoint(reflectX, reflectY);
-	}
-	else if (axis == 'y' || axis == 'Y')
-	{
-		//set new center point for the rectangle 
-		reflectX = 0 - length;
-		reflectY = width;
-		this->center.setPoint(reflectX, reflectY);
-	}
+}
+void Rectangle::reflectY()
+{
+	Point temp = this->getCenterPoint();
+	double tempX(temp.getX()), tempY(temp.getY());
+	tempX = 0 - tempX;
+	this->center.setPoint(tempX, tempY);
+
 }
 
-void Rectangle::translation(double moveX, double moveY)
+void Rectangle::translate(double moveX, double moveY)
 {
 	Point temp = this->getCenterPoint();
 	double tempX = temp.getX();
@@ -73,10 +70,12 @@ void Rectangle::setWidth(double newWidth)
 void Rectangle::display()
 {
 	Point temp = this->getPoint();
+	cout << endl;
 	cout << "Rectangle: " << endl; 
 	cout << "\tCentre: " << "(" << temp.getX() << ", " << temp.getY() << ")" << endl;
 	cout << "\tLength: " << length << endl; 
 	cout << "\tWidth: " << width << endl;
+	cout << endl;
 }
 void Rectangle::printFourVertices()
 {

@@ -20,26 +20,23 @@ double Square::perimeter()
 	return perimeterShape;
 }
 
-void Square::reflect(char axis)
+void Square::reflectX()
 {
-	double reflectX(0), reflectY(0);
+	Point temp = this->getCenterPoint();
+	double tempX(temp.getX()), tempY(temp.getY());
+	tempY = 0 - tempY;
+	this->center.setPoint(tempX, tempY);
 
-	if (axis == 'x' || axis == 'X')
-	{
-		//set new center point for the square 
-		reflectX = size;
-		reflectY = 0 - size;
-		this->center.setPoint(reflectX, reflectY);
-	}
-	else if (axis == 'y' || axis == 'Y')
-	{
-		//set new center point for the square
-		reflectX = 0 - size;
-		reflectY = size;
-		this->center.setPoint(reflectX, reflectY);
-	}
 }
-void Square::translation(double moveX, double moveY)
+void Square::reflectY()
+{
+	Point temp = this->getCenterPoint();
+	double tempX(temp.getX()), tempY(temp.getY());
+	tempX = 0 - tempX;
+	this->center.setPoint(tempX, tempY);
+
+}
+void Square::translate(double moveX, double moveY)
 {
 	Point temp = this->getCenterPoint();
 	double tempX = temp.getX();
@@ -65,7 +62,18 @@ void Square::setSize(double newSize)
 void Square::display()
 {
 	Point temp = this->getPoint();
+	cout << endl;
 	cout << "Square: " << endl;
 	cout << "\tCentre: " << "(" << temp.getX() << ", " << temp.getY() << ")" << endl;
 	cout << "\tSide Length: " << size << endl; 
+	cout << endl;
+}
+
+void Square::setLength(double newLength)
+{
+	size = newLength;
+}
+void Square::setWidth(double newWidth)
+{
+	size = newWidth;
 }

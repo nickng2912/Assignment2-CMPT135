@@ -52,6 +52,52 @@ int main()
 	cout << "\nThe four vertices of the third rectangle are:\n";
 	rectangle3->printFourVertices();
 
+	cout << "\n44444444444444444444444444\n";
+
+	rectangle1->reflectX();
+
+	shapes[2]->translate(1.5, 3);
+
+	shapes[4]->translate(-100, -100);
+
+	cout << "\nAfter reflection and translation, here are the moved shapes:\n";
+	for (int i = 0; i < size; ++i)
+		shapes[i]->display();
+
+	cout << "\n55555555555555555555555555\n";
+
+	cout << "\nNow, the four vertices of the first rectangle are:\n";
+	rectangle1->printFourVertices();
+
+	cout << "\nNow, the four vertices of the third rectangle are:\n";
+	rectangle3->printFourVertices();
+
+	cout << "\n66666666666666666666666666\n\n";
+
+	for (int i = 0; i < size; ++i)
+		cout << shapes[i]->area() << endl;
+
+	// From the following statements, understand how setLength() and setWidth()
+	// work for rectangles and squares.
+
+	cout << "\n777777777777777777777777777\n";
+
+	shapes[1]->display();
+	dynamic_cast<Rectangle*> (shapes[1])->setLength(8.2);
+	cout << "\nAfter setLength(8.2), the rectangle is: ";
+	shapes[1]->display();
+	dynamic_cast<Rectangle*> (shapes[1])->setWidth(5);
+	cout << "\nAfter setWidth(5), the rectangle is: ";
+	shapes[1]->display();
+
+	square2->display();
+	square2->setLength(8.2);
+	cout << "\nAfter setLength(8.2), the rectangle is: ";
+	square2->display();
+	square2->setWidth(5);
+	cout << "\nAfter setWidth(5), the rectangle is: ";
+	square2->display();
+
 	system("pause");
-	return 0; 
+	return 0;
 }

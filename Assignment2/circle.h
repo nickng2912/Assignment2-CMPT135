@@ -11,8 +11,9 @@ public:
 	double area(); 
 	double perimeter(); 
 
-	void reflect(char axis); 
-	void translation(double moveX, double moveY);
+	void reflectX();
+	void reflectY();
+	void translate(double moveX, double moveY);
 
 	double getRadius() const; 
 	Point getPoint() const; 

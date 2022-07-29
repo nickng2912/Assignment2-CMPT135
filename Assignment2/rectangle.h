@@ -11,15 +11,16 @@ public:
 	double area();
 	double perimeter();
 
-	void reflect(char axis); 
-	void translation(double moveX, double moveY);
+	void reflectX(); 
+	void reflectY(); 
+	void translate(double moveX, double moveY);
 
 	double getLenght() const; 
 	double getWidth() const;
 	Point getPoint() const;
 
-	void setLength(double newLength); 
-	void setWidth(double newWidth); 
+	virtual void setLength(double newLength);
+	virtual void setWidth(double newWidth); 
 	
 	void display();
 	void printFourVertices(); 

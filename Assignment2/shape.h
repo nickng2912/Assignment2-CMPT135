@@ -11,8 +11,9 @@ public:
 	virtual double area() = 0;
 	virtual double perimeter() = 0;
 
-	virtual void reflect(char axis) = 0; 
-	virtual void translation(double moveX, double moveY) = 0; 
+	virtual void reflectX() = 0;
+	virtual void reflectY() = 0;
+	virtual void translate(double moveX, double moveY) = 0; 
 
 	double getArea() const; 
 	double getPerimeter() const; 

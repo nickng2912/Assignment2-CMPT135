@@ -11,8 +11,9 @@ public:
 	double area(); 
 	double perimeter(); 
 
-	void reflect(char axis);
-	void translation(double moveX, double moveY);
+	void reflectX();
+	void reflectY();
+	void translate(double moveX, double moveY);
 
 	double getSize() const; 
 	Point getPoint() const; 
@@ -20,6 +21,9 @@ public:
 	void setSize(double newSize); 
 
 	void display(); 
+
+	void setLength(double);
+	void setWidth(double);
 
 private:
 	double size;
