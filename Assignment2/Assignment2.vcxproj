@@ -129,6 +129,7 @@
   <ItemGroup>
     <ClCompile Include="circle.cpp" />
     <ClCompile Include="point.cpp" />
+    <ClCompile Include="Question 2.cpp" />
     <ClCompile Include="rectangle.cpp" />
     <ClCompile Include="shape.cpp" />
     <ClCompile Include="ShapeTester.cpp" />
