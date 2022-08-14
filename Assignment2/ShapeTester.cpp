@@ -1,10 +1,10 @@
-//#include <iostream>
-//#include "point.h"
-//#include "shape.h"
-//#include "rectangle.h"
-//#include "square.h"
-//#include "circle.h"
-//using namespace std; 
+#include <iostream>
+#include "point.h"
+#include "shape.h"
+#include "rectangle.h"
+#include "square.h"
+#include "circle.h"
+using namespace std; 
 //
 //int main()
 //{
@@ -97,6 +97,26 @@
 //	square2->setWidth(5);
 //	cout << "\nAfter setWidth(5), the rectangle is: ";
 //	square2->display();
+//
+//	system("pause");
+//	return 0;
+//}
+
+
+//testing code 2 and the output is correct 
+//int main()
+//{
+//	Rectangle* rectangle = new Square(*new Point(0, 0), 15);
+//	rectangle->display();
+//	rectangle->setLength(12.3);
+//	cout << "\nAfter setLength(12.3), the rectangle area is: ";
+//	cout << rectangle->area() << endl;
+//
+//	rectangle->setWidth(111.11);
+//	cout << "\nAfter setWidth(111.11), the rectangle is: ";
+//	rectangle->display();
+//	cout << "The area is " << rectangle->area() << endl;
+//	cout << endl;
 //
 //	system("pause");
 //	return 0;
